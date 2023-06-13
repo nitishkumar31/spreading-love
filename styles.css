@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+#container {
+  position: relative;
+  height: 50vh;
+  width: 50vw;
+  background-color: bisque;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  box-shadow: 4px 4px 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p {
+  margin-bottom: 6rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+p span {
+  display: block;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgba(47, 79, 79, 0.881);
+}
+
+#container button {
+  position: absolute;
+  height: inherit;
+  width: 10vw;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5%;
+  box-shadow: 2px 2px 2px rgba(122, 122, 122, 0.568);
+  font-family: cursive;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#yes-btn {
+  color: rgb(178, 0, 214);
+  background-color: white;
+  margin-left: -200px;
+}
+
+#no-btn {
+  background-color: rgb(178, 0, 214);
+  color: white;
+  margin-left: 100px;
+}
+
+#container button:active {
+  box-shadow: none;
+}
+
+#container2 {
+  height: 50vh;
+  width: 30vw;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+
+#container2 img {
+  position: relative;
+  top: 3rem;
+  height: 5rem;
+  animation: heartbeat 1s ease-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+#container2 span {
+  font-family: cursive;
+  /* margin-top: 5rem; */
+  font-weight: 600;
+}
+
+#container2 button {
+  padding: 8px 15px;
+  margin-top: 5rem;
+  box-shadow: 1px 1px 1px rgba(122, 122, 122, 0.568);
+  color: rgb(178, 0, 214);
+  background-color: white;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: cursive;
+}
+
+#container2 button:active {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    width: 70vw;
+  }
+  #container p {
+    font-size: 1.5rem;
+  }
+
+  #container p span {
+    font-size: 1rem;
+  }
+
+  #container button {
+    width: 4rem;
+  }
+
+  #yes-btn {
+    margin-left: -80px;
+  }
+
+  #no-btn {
+    margin-left: 20px;
+  }
+
+  #container2 {
+    width: 70vw;
+  }
+}
